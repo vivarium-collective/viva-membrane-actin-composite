@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pbg-membrane-actin-composite"
+name = "viva-membrane-actin-composite"
 version = "0.1.0"
-description = "Process-bigraph composite wiring pbg-mem3dg + pbg-readdy as a Brownian-ratchet membrane-actin coupling"
+description = "Process-bigraph composite wiring viva-mem3dg + viva-readdy as a Brownian-ratchet membrane-actin coupling"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.11"
@@ -33,13 +33,13 @@ dependencies = [
 # Heavy compiled backends (pymem3dg needs system netcdf-cxx4; readdy). Not built
 # in vanilla CI — installed on demand / in the Docker image. Tests needing them
 # skip via tests/conftest.py when absent.
-sim = ["pbg-mem3dg", "pbg-readdy"]
+sim = ["viva-mem3dg", "viva-readdy"]
 dev = ["pytest>=7.4", "pytest-cov>=4.1", "pytest-timeout>=2.1"]
 demo = ["plotly>=5.18", "matplotlib>=3.7", "bigraph-viz>=0.0.30"]
 
 [project.urls]
-Homepage = "https://github.com/vivarium-collective/pbg-membrane-actin-composite"
-Issues = "https://github.com/vivarium-collective/pbg-membrane-actin-composite/issues"
+Homepage = "https://github.com/vivarium-collective/viva-membrane-actin-composite"
+Issues = "https://github.com/vivarium-collective/viva-membrane-actin-composite/issues"
 
 [tool.setuptools.packages.find]
 include = ["pbg_membrane_actin_composite*"]
@@ -50,6 +50,6 @@ include = ["pbg_membrane_actin_composite*"]
 # checkouts, override these in a per-user `.env` or with --refresh after
 # editing this file. See notes/friction/2026-05-18-workspace-onboarding-from-composite.md
 # §6 for the underlying issue.
-pbg-mem3dg = { git = "https://github.com/vivarium-collective/pbg-mem3dg.git" }
-pbg-readdy = { git = "https://github.com/vivarium-collective/pbg-readdy.git" }
+viva-mem3dg = { git = "https://github.com/vivarium-collective/viva-mem3dg.git" }
+viva-readdy = { git = "https://github.com/vivarium-collective/viva-readdy.git" }
 vivarium-workbench = { git = "https://github.com/vivarium-collective/vivarium-workbench.git" }
