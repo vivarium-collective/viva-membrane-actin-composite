@@ -52,4 +52,4 @@ include = ["pbg_membrane_actin_composite*"]
 # §6 for the underlying issue.
 viva-mem3dg = { git = "https://github.com/vivarium-collective/viva-mem3dg.git" }
 viva-readdy = { git = "https://github.com/vivarium-collective/viva-readdy.git" }
-vivarium-workbench = { git = "https://github.com/vivarium-collective/vivarium-workbench.git" }
+vivarium-workbench = { git = "https://github.com/vivarium-collective/vivarium-workbench.git", branch = "main" }
