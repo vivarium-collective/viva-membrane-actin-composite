@@ -1527,7 +1527,7 @@ expect:  {"op": "ratio_at_least", "ratio": 1.1}</pre>
 </section>
 
 </main>
-<script>window.__DASH_CONFIG__ = { mode: "snapshot", interactiveUrl: "https://github.com/vivarium-collective/viva-membrane-actin-composite", basePath: "/viva-membrane-actin-composite/workbench", inputsDownloadBase: "https://github.com/vivarium-collective/viva-membrane-actin-composite/raw/main", provenance: {"repo_slug": "vivarium-collective/viva-membrane-actin-composite", "repo_url": "https://github.com/vivarium-collective/viva-membrane-actin-composite", "commit": "e0ed0e2f71be5bbb5b24b3a18b98adb7da8ab350", "commit_url": "https://github.com/vivarium-collective/viva-membrane-actin-composite/commit/e0ed0e2f71be5bbb5b24b3a18b98adb7da8ab350", "branch": "main", "lockfile": "uv.lock@ac563bb310fc", "generated_at": "2026-10-23 05:46 UTC"} };</script>
+<script>window.__DASH_CONFIG__ = { mode: "snapshot", interactiveUrl: "https://github.com/vivarium-collective/viva-membrane-actin-composite", basePath: "/viva-membrane-actin-composite/workbench", inputsDownloadBase: "https://github.com/vivarium-collective/viva-membrane-actin-composite/raw/main", provenance: {"repo_slug": "vivarium-collective/viva-membrane-actin-composite", "repo_url": "https://github.com/vivarium-collective/viva-membrane-actin-composite", "commit": "cd0d0b71d145d049c1c10b0bc8f5b010bca8f9ad", "commit_url": "https://github.com/vivarium-collective/viva-membrane-actin-composite/commit/cd0d0b71d145d049c1c10b0bc8f5b010bca8f9ad", "branch": "main", "lockfile": "uv.lock@bf3468b36979", "generated_at": "2026-10-27 12:41 UTC"} };</script>
 <script src="/viva-membrane-actin-composite/workbench/assets/data-source.js"></script>
 <script src="/viva-membrane-actin-composite/workbench/assets/toast.js"></script>
 <script>
@@ -1685,6 +1685,13 @@ window._seedFollowupProposal = _seedFollowupProposal;
   // run buttons in a published read-only snapshot (reproducible-rerun-spine
   // Task 4 / G2: both equally inert with no live backend to launch against).
   if (window.__DASH_CONFIG__ && window.__DASH_CONFIG__.mode === "snapshot") {
+    // The study-detail shell does NOT load walkthrough.js (which sets this on
+    // the main SPA), so set body.snapshot here. Without it every snapshot check
+    // on this page reads false — most visibly the inline bigraph-loom embed,
+    // which then mounts in LIVE mode (?id=&live=1) and hangs forever fetching
+    // /api/composite-state?ref=… against a backend the static bundle doesn't
+    // have, instead of the baked static /api/composite-state/<id>.json.
+    document.body.classList.add("snapshot");
     var reproduceBtn = document.getElementById("study-reproduce");
     if (reproduceBtn) reproduceBtn.style.display = "none";
     var runCurrentBtn = document.getElementById("study-run-current-spec");
