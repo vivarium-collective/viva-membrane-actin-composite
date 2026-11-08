@@ -29,7 +29,7 @@ actin re-bends, the cycle continues.
 
 | Investigation | Research question |
 |---|---|
-| [Membrane–actin Brownian ratchet — from boundary baselines to a coupled flexible membrane _(running)_](https://vivarium-collective.github.io/viva-membrane-actin-composite/investigations/membrane-actin-ratchet.html) | Can a particle-based actin Brownian ratchet (ReaDDy) push against a deformable membrane (Mem3DG) through a physically faithful bidirectional coupler, and does increasing boundary realism — fixed wall… |
+| [Membrane–actin Brownian ratchet — from boundary baselines to a coupled flexible membrane _(running)_](https://vivarium-collective.github.io/viva-membrane-actin-composite/workbench/reports/investigation-membrane-actin-ratchet.html) | Can a particle-based actin Brownian ratchet (ReaDDy) push against a deformable membrane (Mem3DG) through a physically faithful bidirectional coupler, and does increasing boundary realism — fixed wall… |
 <!-- END:investigations -->
 
 **→ [vivarium-collective.github.io/viva-membrane-actin-composite](https://vivarium-collective.github.io/viva-membrane-actin-composite/)**
